@@ -36,6 +36,19 @@
 5. mcount_return()함수의 주소를 구하기 mcount_init()호출되어 mcount.S의 mcount_return 함수를 mocount_return_fn으로 넘겨준다. 이 작업 왜 필요한지 동적 라이브러리와 관련이 있는지 않을까 추정하고 있다.
 6. mcount_init() 어디서 호출되는지 아직 파악이 필요한데 a.out에 __monstartup으로 점프하는 명령어가 아닐까 추정하고있다.
 
+# 2024.09.20 스터디 내용
+0. 2024.07.19 스터디 내용 5. 6. 을 디스코드로 멘토님께 질문하여 답변을 받음
+
+1. mcount_init() 함수는 a.out의 동적 라이브러리 init()에서 plt hooking을 으로 실행된다.
+![alt text](image-4.png)
+2. uftrace a.out의 실행 순서를 기본 기능 원리 중심으로 생각해보면 아래와 같다
+    1. uftrace에서 setenv함수를 실행 LD_PRELOAD 값의 path를 libmocunt폴더로 변경하여 a.out실행시 glibc.so대신 libmcount.so가 실행되도록 설정한다.
+    2. a.out가 실행되고 main()함수가 실행되기 전에 libmcount.c의 mocount_init()함수가 실행되고 이 안에서 mcount_return()의 주소를 저장함
+    3. a.out main()이 실행되고 그 이후에는 각 함수(main()을 포함)가 실행될때마다 mcount()함수가 실행되어 mcount 함수에서는 입력값, 부모함수주소, 자식함수주소(본인), 반환값 주소를 확인함.
+    4. 또한 자식함수주소에 리턴이후 돌아가는 함수의 주소를 mcount_retune()주소 변경하여 함수가 끝난후 mcount_return()이 실행되도록함
+    5. mcount_return에서는 mocunt()가 실행된 시점의 시간과 mcount_return()실행된 시간을 차이를 구하여 자식함수의 실행시간을 측정할수 있게됨
+    6. 위 과정들을 모두 메모리에 저장하고 a.out실행 종료후 저장된 메모리를 잘 가공하여 상황에 맞게 uftrace에서 출력해서 terminal로 출력해줌
+
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
 [ftracelink]: https://www.bhral.com/post/linux-kernel-ftrace-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9B%90%EB%A6%AC
