@@ -65,6 +65,9 @@
 6. Access the mtd through TSD pointer to reduce TLS overhead라는 주석을 이해하기 위해 mtd TSD TLS에 대해 이해할 필요성을 느낌(리눅스 커널에 대한 지식 필요)
 7. 책 임베디드 레시피 구매
 
+# 2024.07.23
+1. 리눅스 추천도서를 검색하던중 리눅스 커널에 대한 좋은 [무료강의][강의ULR]를 찾음
+2. 12강중 1강을 들었으며 커널과 유틸의 차이를 이해하였고(메모리 레지던트, 디스크 레지던트) 시스템 콜의 개념을 이해함
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
@@ -74,4 +77,4 @@
 [uftrace강민철link]: https://www.youtube.com/watch?v=mLhZz0Ibpno&t=405s
 [preloadlink]: https://ar9ang3.tistory.com/8
 [동적라이브러리link]: https://jjang-joon.tistory.com/28
-
+[강의ULR]: https://olc.kr/course/course_online_view.jsp?id=35&s_keyword=Kernel&x=0&y=0#self
