@@ -36,7 +36,7 @@
 5. mcount_return()함수의 주소를 구하기 mcount_init()호출되어 mcount.S의 mcount_return 함수를 mocount_return_fn으로 넘겨준다. 이 작업 왜 필요한지 동적 라이브러리와 관련이 있는지 않을까 추정하고 있다.
 6. mcount_init() 어디서 호출되는지 아직 파악이 필요한데 a.out에 __monstartup으로 점프하는 명령어가 아닐까 추정하고있다.
 
-# 2024.09.20 스터디 내용
+# 2024.07.20 스터디 내용
 0. 2024.07.19 스터디 내용 5. 6. 을 디스코드로 멘토님께 질문하여 답변을 받음
 
 1. mcount_init() 함수는 a.out의 동적 라이브러리 init()에서 plt hooking을 으로 실행된다.
@@ -49,6 +49,14 @@
     5. mcount_return에서는 mocunt()가 실행된 시점의 시간과 mcount_return()실행된 시간을 차이를 구하여 자식함수의 실행시간을 측정할수 있게됨
     6. 위 과정들을 모두 메모리에 저장하고 a.out실행 종료후 저장된 메모리를 잘 가공하여 상황에 맞게 uftrace에서 출력해서 terminal로 출력해줌
 
+
+# 2024.07.21
+1. OSSCA 모임이 있어(불참하였지만) 디스코드 방에 자료가 올라와 해당 내용진행
+2. 코드 스타일을 위해 pre-commit 설치, 가이드에는 파이썬으로 다운로드 되게 되어있지만 리눅스 환경에서는 sudo apt~~~~ 명령어를 이용하여 설치함
+3. 기여 방법이나 First 이슈에 대해서 살펴봤지만 현재로서는 충분히 이해하기 어려움
+4. ssh를 통한 원격 서버 접속으로 window에서 Linux 환경 폴더로 VScode를 확장을 사용하여 접근 시도하였으나 실패
+
+
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
 [ftracelink]: https://www.bhral.com/post/linux-kernel-ftrace-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9B%90%EB%A6%AC
@@ -57,5 +65,4 @@
 [uftrace강민철link]: https://www.youtube.com/watch?v=mLhZz0Ibpno&t=405s
 [preloadlink]: https://ar9ang3.tistory.com/8
 [동적라이브러리link]: https://jjang-joon.tistory.com/28
-
 
