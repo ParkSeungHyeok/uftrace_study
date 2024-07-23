@@ -56,6 +56,15 @@
 3. 기여 방법이나 First 이슈에 대해서 살펴봤지만 현재로서는 충분히 이해하기 어려움
 4. ssh를 통한 원격 서버 접속으로 window에서 Linux 환경 폴더로 VScode를 확장을 사용하여 접근 시도하였으나 실패
 
+# 2024 07.22
+1. ssh 통한 원격 서버 접속 성공 (서버 추가할때 ssh 명령어를 입력하지 않아 발생함)
+2. mcount.c의 __mcount_entry 함수를 살펴보며 uftrace로 shared memory를 통해 넘겨주는 변수들을 확인해보고자함
+3. 일단 rstack변수에 주요 데이터가 들어가는것을 확인함. rstack의 depth, parent_loc, parent_ip, child_ip, start_time, end_time이 기본적인 Data로 보임
+4. *parent_loc = mcount_return_fn 를 통해 리턴 주소바꿔치기(hijack)함
+5. 함수하나하나 분석하는것은 아직 무리가 있어 주석을 통해 일단 함수의 기능을 이해고자
+6. Access the mtd through TSD pointer to reduce TLS overhead라는 주석을 이해하기 위해 mtd TSD TLS에 대해 이해할 필요성을 느낌(리눅스 커널에 대한 지식 필요)
+7. 책 임베디드 레시피 구매
+
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
