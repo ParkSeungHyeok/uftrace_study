@@ -76,6 +76,12 @@
 4. 함수 반환시에도 반환값어디 레지스터에 넣는지, 스택 포인트가 어떻게 움직이고 반환주소를 어떻게 찾아가는지 등을 확인함
 5. 다시한번 어셈블리 명령어마다 레지스터가 어떻게 움직이는 확인하고 싶음
 
+
+# 2024.07.25
+1. 리눅스 커널 강의 3강 수강
+2. excalidraw로 지금까지 학습한것을 그림으로 정리, 일요일 전까지 배포 예정
+3. 그림으로 정리중 동적 라이브러리 링크에 대해서 제대로 이해하지 못하고 있었음을 확인
+
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
 [ftracelink]: https://www.bhral.com/post/linux-kernel-ftrace-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9B%90%EB%A6%AC
