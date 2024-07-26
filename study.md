@@ -40,6 +40,7 @@
 0. 2024.07.19 스터디 내용 5. 6. 을 디스코드로 멘토님께 질문하여 답변을 받음
 
 1. mcount_init() 함수는 a.out의 동적 라이브러리 init()에서 plt hooking을 으로 실행된다.
+
 ![alt text](image-4.png)
 2. uftrace a.out의 실행 순서를 기본 기능 원리 중심으로 생각해보면 아래와 같다
     1. uftrace에서 setenv함수를 실행 LD_PRELOAD 값의 path를 libmocunt폴더로 변경하여 a.out실행시 glibc.so대신 libmcount.so가 실행되도록 설정한다.
@@ -81,6 +82,10 @@
 1. 리눅스 커널 강의 3강 수강
 2. excalidraw로 지금까지 학습한것을 그림으로 정리, 일요일 전까지 배포 예정
 3. 그림으로 정리중 동적 라이브러리 링크에 대해서 제대로 이해하지 못하고 있었음을 확인
+
+# 20224.07.26
+1. uftrace 전파자료 작성
+2. plt hook에 이해하지 못하는 부분이 있었고 이를 이해하는 과정에 elf plt got에 대한 이해도를 높임
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
