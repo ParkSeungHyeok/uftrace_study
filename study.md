@@ -83,9 +83,13 @@
 2. excalidraw로 지금까지 학습한것을 그림으로 정리, 일요일 전까지 배포 예정
 3. 그림으로 정리중 동적 라이브러리 링크에 대해서 제대로 이해하지 못하고 있었음을 확인
 
-# 20224.07.26
-1. uftrace 전파자료 작성
+# 2024.07.26
+1. uftrace 자료정리 및 공유
 2. plt hook에 이해하지 못하는 부분이 있었고 이를 이해하는 과정에 elf plt got에 대한 이해도를 높임
+
+# 2024.07.27
+1. uftrace 공유자료 피드백 받음
+2. uftrace 프로파일링 관련 원리 정리 및 공유
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
