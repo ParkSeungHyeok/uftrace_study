@@ -91,6 +91,11 @@
 1. uftrace 공유자료 피드백 받음
 2. uftrace 프로파일링 관련 원리 정리 및 공유
 
+# 2024.07.28
+1. 디스코드에 올라온 자료 mcount 바꿔치기에 대한 내용 학습
+2. 피드백 받은 공유자료 노션으로 다시 작성하여 pdf로 공유함
+3. 이제부터 학습 정리를 노션으로 하고 excalidraw는 사진 자료 편집으로 사용할 예정
+
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
 [ftracelink]: https://www.bhral.com/post/linux-kernel-ftrace-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9B%90%EB%A6%AC
