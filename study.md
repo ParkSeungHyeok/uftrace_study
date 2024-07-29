@@ -1,4 +1,4 @@
-# 2024.07.17 스터디 내용
+# 2024.07.17 
 1. gcc에 option으로 mcount같은 trace 관련 함수를 호출하도록 컴파일하는 것 같음([youtube 영상으로 학습][uftrace강민철link])
 2. mcount 같은 함수를 함수[프로파일러][프로파일링링크]라고 하는 것 같음
 3. mcount는 [glibc][glibclink][.so][so파일link](GNU  C Library)의 [gmon][gmonlink]이라는 component에서 프로파일러로 동작하는 것 같다. 
@@ -8,7 +8,7 @@
 7. makefile을 잘 분석하면 libmcount에 어떤 c파일이 들어가있는지 확인가능할듯 싶다.
 
 
-# 2024.07.18 스터디 내용
+# 2024.07.18
 1. [preload][preloadlink]의 개념을 이해하기 위해서는 [동적라이브러리][동적라이브러리link]의 개념부터 이해가 필요하다
 2. 환경 변수 LD_PRELOAD를 변경하여 preload를 하는것 같다
 3. getenv, setenv를 환경변수관련 라이브러리함수를 사용하여 설정한다.
@@ -25,7 +25,7 @@
 ![alt text](image.png)
 
 
-# 2024.07.19 스터디 내용
+# 2024.07.19
 1. execv(opts->exename, argv)는 recode와 live에서 실행된다.
 2. mcount()함수에서 call trace 관게를 알수 있는 방법은 실행(추적?)중인 함수에서 mcount()가 호출 되었을때 stack에 쌓인 인자값, 부모함수 주소, 자식함수 주소, 리턴값 주소 정보를 확인할수 있다
 3. 위 과정은 [ftrace][ftracelink] 설명에 자세히 나와있다.
@@ -36,7 +36,7 @@
 5. mcount_return()함수의 주소를 구하기 mcount_init()호출되어 mcount.S의 mcount_return 함수를 mocount_return_fn으로 넘겨준다. 이 작업 왜 필요한지 동적 라이브러리와 관련이 있는지 않을까 추정하고 있다.
 6. mcount_init() 어디서 호출되는지 아직 파악이 필요한데 a.out에 __monstartup으로 점프하는 명령어가 아닐까 추정하고있다.
 
-# 2024.07.20 스터디 내용
+# 2024.07.20
 0. 2024.07.19 스터디 내용 5. 6. 을 디스코드로 멘토님께 질문하여 답변을 받음
 
 1. mcount_init() 함수는 a.out의 동적 라이브러리 init()에서 plt hooking을 으로 실행된다.
@@ -95,6 +95,10 @@
 1. 디스코드에 올라온 자료 mcount 바꿔치기에 대한 내용 학습
 2. 피드백 받은 공유자료 노션으로 다시 작성하여 pdf로 공유함
 3. 이제부터 학습 정리를 노션으로 하고 excalidraw는 사진 자료 편집으로 사용할 예정
+
+# 2024.07.29
+1. 디스코드에 올란온 자료 plt hooking과 다이나믹 트레이싱 학습
+2. 다이나믹 트레이싱을 이해하고 uftrace를 uftrace로 트레이싱 해봄
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
