@@ -100,6 +100,11 @@
 1. 디스코드에 올란온 자료 plt hooking과 다이나믹 트레이싱 학습
 2. 다이나믹 트레이싱을 이해하고 uftrace를 uftrace로 트레이싱 해봄
 
+# 2024.07.30
+1. 금일 추가로 올려주신 자라 학습
+2. gdb를 활용한 디버깅 방법 실습
+3. 함수가 호출되는 과정에서 Stack Frame에 Data가 어떻게 되는 확인
+
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
 [ftracelink]: https://www.bhral.com/post/linux-kernel-ftrace-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9B%90%EB%A6%AC
