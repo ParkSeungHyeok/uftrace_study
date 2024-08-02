@@ -105,9 +105,19 @@
 2. gdb를 활용한 디버깅 방법 실습
 3. 함수가 호출되는 과정에서 Stack Frame에 Data가 어떻게 되는 확인
 
-# 2024.0731
+# 2024 .07.30
 1. 리눅스 커널 강의 4강 수강
+2. 중간보고서 설명 온라인 모임 참석
+
+# 2024.08.01
+1. 리눅스 커널 강의 5강 수강
 2. 중간보고서 작성
+
+# 2024.08.02
+1. 리눅스 커널 강의 6강 수강
+2. mcount.S의 mcount() 함수 학습
+
+
 
 [so파일link]: https://snowjeon2.tistory.com/18
 [프로파일링링크]: https://ypangtrouble.tistory.com/entry/%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC%EB%A7%81
