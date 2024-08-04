@@ -117,6 +117,15 @@
 1. 리눅스 커널 강의 6강 수강
 2. mcount.S의 mcount() 함수 학습
 
+# 2024.08.03
+1. 리눅스 커널 강의 7강 수강
+2. Fisrt good issue, --help COMMAND 별로 만들기 시도
+
+# 2024.08.04
+1. Fisrt good issue에 coment 남김
+2. --help COMMAND 별로 만들기 시도 1차 구현 완료
+
+
 
 
 [so파일link]: https://snowjeon2.tistory.com/18
